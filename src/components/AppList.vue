@@ -10,6 +10,7 @@
     </div>
   </div>
 </template>
+
 <script setup lang="ts">
 import { defineProps } from "vue";
 
@@ -23,9 +24,9 @@ defineProps<{ friends: Friend[] }>();
 
 <style scoped lang="scss">
 @use "@/styles/variables.scss" as *;
+
 .list-container {
   box-sizing: border-box;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,9 +34,9 @@ defineProps<{ friends: Friend[] }>();
   gap: 8px;
 
   width: 100%;
-  max-height: 380px;
-  overflow-y: scroll;
-
+  flex: 1;
+  overflow-y: auto;
+  max-height: 500px;
   background: radial-gradient(51.04% 70.67% at 50% 52.89%, #3081b4 0%, #19488c 100%);
   border-width: 0px 1px 1px 1px;
   border-style: solid;
@@ -43,9 +44,7 @@ defineProps<{ friends: Friend[] }>();
   box-shadow: inset 0px 4px 4.5px rgba(0, 3, 6, 0.5);
   border-radius: 12px;
 
-  flex: none;
-  order: 2;
-  flex-grow: 0;
+  position: relative;
 }
 
 .list-item {
@@ -59,35 +58,17 @@ defineProps<{ friends: Friend[] }>();
   gap: 8px;
 
   width: 100%;
-  height: 42px;
-  max-height: 440px;
-  overflow-y: scroll;
-
   background: radial-gradient(51.04% 70.67% at 50% 52.89%, #3081b4 0%, #19488c 100%);
-
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
 
   .icon {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0px;
-    gap: 10px;
-
     width: 30px;
     height: 30px;
-
     background: #15376c;
     box-shadow: 0px 1px 4px rgba(0, 174, 229, 0.5);
     border-radius: 4px;
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
 
     img {
       width: auto;
@@ -97,22 +78,19 @@ defineProps<{ friends: Friend[] }>();
 
   .name {
     font-family: "Lato", sans-serif;
-    font-style: normal;
     font-weight: 600;
     font-size: 10px;
-    text-align: center;
-
+    width: 184px;
+    text-align: start;
     color: #ffffff;
     @include text-stroke(#000000, 0.5px, 1px);
   }
 
   .level {
     font-family: "Lato", sans-serif;
-    font-style: normal;
     font-weight: 600;
     font-size: 16px;
     text-align: center;
-
     color: #ffffff;
     @include text-stroke(#000000, 0.5px, 1px);
   }
