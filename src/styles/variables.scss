@@ -1,0 +1,14 @@
+$stroke-shadow: 
+  -0.5px 0 #000000,  /* Слева */
+  0.5px 0 #000000,   /* Справа */
+  0 -0.5px #000000,  /* Сверху */
+  0 0.5px #000000;   /* Снизу */
+
+@mixin text-stroke($color: #000000, $size: 0.5px, $shadow-size: 2px) {
+text-shadow: 
+  -#{$size} 0 $color,
+  #{$size} 0 $color,
+  0 -#{$size} $color,
+  0 #{$size} $color,
+  0 #{$shadow-size} 0 $color;
+}
