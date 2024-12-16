@@ -1,9 +1,17 @@
-
 # **Invite-Friends-App Documentation**
 
 ## **Overview**
 
 This is a Vue 3 application built with TypeScript, SCSS, and Vite. The app includes a friend invitation feature with components for buttons, lists, and layout.
+
+https://invite-friends-pg2s73ok2-antoxa291s-projects.vercel.app/
+
+## **Ready Example**
+
+[Example
+](https://invite-friends-pg2s73ok2-antoxa291s-projects.vercel.app/)
+
+[GitHub repo](https://github.com/anton-vorobiov-dev/invite-friends-app)
 
 ---
 
